@@ -1,6 +1,16 @@
 # TODO: fast-stable-diffusion
 
-Last Updated: 2026-04-27 (T-001 to T-009 all complete / Phase 1 done)
+Last Updated: 2026-04-30
+
+---
+
+## Notebook Support Policy
+
+| Notebook | Status | Notes |
+|----------|--------|-------|
+| AUTOMATIC1111 | ✅ Active Maintenance | Primary target |
+| ComfyUI | 🔧 Planned | Compatibility check & fixes needed |
+| DreamBooth | ❄️ Not Supported | Frozen. No maintenance. |
 
 ---
 
@@ -12,7 +22,11 @@ None
 
 ## Pending
 
-None (All Phase 1 tasks complete)
+| # | Task | Priority | Notes |
+|---|------|----------|-------|
+| T-010 | ComfyUI: verify compatibility with PyTorch 2.10 | High | Run on Colab and check for errors |
+| T-011 | ComfyUI: add xformers fix cell if needed | Medium | Same pattern as AUTOMATIC1111 |
+| T-012 | ComfyUI: verify gdown==5.2.1 pin is applied | Medium | Check Requirements cell |
 
 ---
 
