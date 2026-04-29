@@ -1,1 +1,4 @@
 .DS_Store
+
+# Japanese source files (local only, English versions are committed)
+*.ja.md

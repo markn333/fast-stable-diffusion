@@ -1,34 +1,45 @@
 # PROGRESS: fast-stable-diffusion
 
-最終更新: 2026-04-28
+Last Updated: 2026-04-30
 
 ---
 
-## 現在フェーズ: 🔧 保守モード
+## Current Phase: 🔧 Maintenance Mode
 
 ---
 
-## 進捗サマリー
+## Progress Summary
 
-| フェーズ | タスク | 状態 |
-|---------|--------|------|
-| Phase 1 | ノートブック解析・SPEC.md 作成・バグ修正 | ✅ 完了 |
-| Phase 2 | 独立リポジトリ化 | ✅ 完了 |
-| Phase 3 | 継続メンテナンス体制 | 🔧 保守モード運用中 |
+| Phase | Task | Status |
+|-------|------|--------|
+| Phase 1 | Notebook analysis, SPEC.md creation, bug fixes | ✅ Complete |
+| Phase 2 | Standalone repository setup | ✅ Complete |
+| Phase 3 | Ongoing maintenance | 🔧 Active Maintenance |
 
 ---
 
-## 作業ログ
+## Work Log
 
 ### 2026-04-27
 
-- ✅ プロジェクト作成（REQUEST.md, PLAN.md, PROJECT.md）
-- ✅ `fast_stable_diffusion_AUTOMATIC1111.ipynb` の xformers 問題を修正
-  - PyTorch 2.10.0 への追従（Fix xformers セル追加）
-  - GitHub へコミット・プッシュ（`8308f00`）
-- ✅ `fast_stable_diffusion_AUTOMATIC1111.ipynb` の全セル解析完了 → SPEC.md 作成
-- ✅ bugs/BUG-0001.md（xformers 修正記録）作成
-- ✅ gdown==5.2.1 ピン留め（BUG-0002 / T-009）→ commit `822d26c`
-- ✅ Colab 環境チェックセル全3ノートブックに追加（T-007）→ commit `3b14375`
-- ✅ python3.12 ハードコード20箇所を動的 pyver 変数に置換（T-008）→ commit `2cdfc95`
-- ✅ Phase 1 全タスク（T-000〜T-009）完了
+- ✅ Project created (REQUEST.md, PLAN.md, PROJECT.md)
+- ✅ Fixed xformers issue in `fast_stable_diffusion_AUTOMATIC1111.ipynb`
+  - Updated for PyTorch 2.10.0 compatibility (added Fix xformers cell)
+  - Committed and pushed to GitHub (`8308f00`)
+- ✅ Completed full cell analysis of `fast_stable_diffusion_AUTOMATIC1111.ipynb` → SPEC.md created
+- ✅ Created bugs/BUG-0001.md (xformers fix record)
+- ✅ Pinned gdown==5.2.1 (BUG-0002 / T-009) → commit `822d26c`
+- ✅ Added Colab environment check cell to all 3 notebooks (T-007) → commit `3b14375`
+- ✅ Replaced 20 hardcoded python3.12 paths with dynamic pyver variable (T-008) → commit `2cdfc95`
+- ✅ Completed all Phase 1 tasks (T-000 to T-009)
+
+### 2026-04-28
+
+- ✅ BUG-0003: Fixed device mismatch in sd_emphasis.py → commit `b7afb7a`
+- ✅ BUG-0004: Fixed meta tensor issue in sd_disable_initialization.py (assign=True) → commit `adc2c59`
+- ✅ BUG-0005: Fixed CLIP position_ids HalfTensor → position_ids.long() → commit `d8d750c`
+
+### 2026-04-30
+
+- ✅ Verified BUG-0005 fix (image generation confirmed working on SDXL + Illustrious models)
+- ✅ Removed duplicate xformers cell (id=NONE) → commit `214e5e9`

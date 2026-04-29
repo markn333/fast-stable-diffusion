@@ -1,32 +1,32 @@
 # TODO: fast-stable-diffusion
 
-最終更新: 2026-04-27（T-001～T-009 全完了 / Phase 1 完了）
+Last Updated: 2026-04-27 (T-001 to T-009 all complete / Phase 1 done)
 
 ---
 
-## 進行中
+## In Progress
 
-なし
-
----
-
-## 未着手
-
-なし（Phase 1 タスク全完了）
+None
 
 ---
 
-## 完了
+## Pending
 
-| # | タスク | 完了日 | 関連 |
-|---|--------|--------|------|
-| T-008 | Python パスハードコードの修正実装 | 2026-04-27 | 全3ノートブック20箇所。commit `2cdfc95` |
-| T-007 | Colab 環境チェックセルの実装 | 2026-04-27 | 全3ノートブック。commit `3b14375` |
-| T-009 | gdown v6 対応実装 | 2026-04-27 | 短期対応（gdown==5.2.1 ピン留め）完了。commit `822d26c` |
-| T-006 | gdown v6 破壊的変更調査 | 2026-04-27 | SPEC.md 既知問題 #2 に記録済み |
-| T-005 | Python パスハードコード問題の対策検討 | 2026-04-27 | 対策案 SPEC.md に記載。T-008 で実装済み |
-| T-004 | ブランチ戦略・コミット規約の文書化 | 2026-04-27 | PROJECT.md に記載済み |
-| T-003 | upstream 差分整理 | 2026-04-27 | PROJECT.md に記載済み |
-| T-002 | DreamBooth ノートブックの解析・SPEC 追記 | 2026-04-27 | SPEC.md 更新済み |
-| T-001 | ComfyUI ノートブックの解析・SPEC 追記 | 2026-04-27 | SPEC.md 更新済み |
-| T-000 | xformers PyTorch 2.10.0 非互換問題の修正 | 2026-04-27 | BUG-0001 / commit `8308f00` |
+None (All Phase 1 tasks complete)
+
+---
+
+## Completed
+
+| # | Task | Completed | Notes |
+|---|------|-----------|-------|
+| T-008 | Fix hardcoded Python paths | 2026-04-27 | 20 locations across 3 notebooks. commit `2cdfc95` |
+| T-007 | Implement Colab environment check cell | 2026-04-27 | All 3 notebooks. commit `3b14375` |
+| T-009 | gdown v6 compatibility fix | 2026-04-27 | Short-term fix (gdown==5.2.1 pin) complete. commit `822d26c` |
+| T-006 | Investigate gdown v6 breaking changes | 2026-04-27 | Documented in SPEC.md known issues #2 |
+| T-005 | Plan fix for hardcoded Python path issue | 2026-04-27 | Solution documented in SPEC.md. Implemented in T-008 |
+| T-004 | Document branch strategy and commit conventions | 2026-04-27 | Documented in PROJECT.md |
+| T-003 | Organize upstream diff | 2026-04-27 | Documented in PROJECT.md |
+| T-002 | Analyze DreamBooth notebook and update SPEC | 2026-04-27 | SPEC.md updated |
+| T-001 | Analyze ComfyUI notebook and update SPEC | 2026-04-27 | SPEC.md updated |
+| T-000 | Fix xformers PyTorch 2.10.0 incompatibility | 2026-04-27 | BUG-0001 / commit `8308f00` |
