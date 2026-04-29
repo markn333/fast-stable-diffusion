@@ -27,6 +27,7 @@ None
 | T-010 | ComfyUI: verify compatibility with PyTorch 2.10 | High | Run on Colab and check for errors |
 | T-011 | ComfyUI: add xformers fix cell if needed | Medium | Same pattern as AUTOMATIC1111 |
 | T-012 | ComfyUI: verify gdown==5.2.1 pin is applied | Medium | Check Requirements cell |
+| T-013 | Post announcement on original repo Issues | Low | https://github.com/TheLastBen/fast-stable-diffusion/issues — notify users about this fork |
 
 ---
 
