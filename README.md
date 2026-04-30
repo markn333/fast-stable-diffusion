@@ -10,7 +10,7 @@
 | Notebook | Status | Open |
 |----------|--------|------|
 | **AUTOMATIC1111** | ✅ Maintained | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/markn333/fast-stable-diffusion/blob/main/fast_stable_diffusion_AUTOMATIC1111.ipynb) |
-| **ComfyUI** | 🔧 Planned | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/markn333/fast-stable-diffusion/blob/main/fast_stable_diffusion_ComfyUI.ipynb) |
+| **ComfyUI** | ✅ Active Maintenance | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/markn333/fast-stable-diffusion/blob/main/fast_stable_diffusion_ComfyUI.ipynb) |
 | **DreamBooth** | ❄️ Not Supported | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/markn333/fast-stable-diffusion/blob/main/fast-DreamBooth.ipynb) |
 
 ---
@@ -24,6 +24,11 @@
 | BUG-0003 | `sd_emphasis.py` tensor device mismatch (`cuda:0` vs `meta`) | Added `.to(device, dtype)` cast |
 | BUG-0004 | `load_state_dict` fails on meta tensor with PyTorch 2.10 | Added `assign=True` |
 | BUG-0005 | CLIP `position_ids` becomes `HalfTensor`, breaks Embedding | Added `.long()` cast |
+| BUG-0006 | ComfyUI crashes when `Ngrok_Token` is empty | Added `if Ngrok_Token != "":` guard |
+| BUG-0007 | `ModuleNotFoundError: No module named 'comfy_aimdo'` | Added `comfy-aimdo` to Requirements |
+| BUG-0008 | `simpleeval` missing + xformers built for PyTorch 2.9 | Added `simpleeval` to Requirements; added Fix xformers cell |
+| BUG-0009 | ComfyUI URL inaccessible (tunnel + timing issues) | Switched to pinggy.io; stream stdout line-by-line to detect readiness |
+| BUG-0010 | `FormData.__init__() got unexpected keyword argument 'default_to_multipart'` | Added `aiohttp -U` to Requirements |
 
 See [`bugs/`](./bugs/) for full details on each fix.
 
