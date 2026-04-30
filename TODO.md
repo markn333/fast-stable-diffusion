@@ -9,7 +9,7 @@ Last Updated: 2026-04-30
 | Notebook | Status | Notes |
 |----------|--------|-------|
 | AUTOMATIC1111 | ✅ Active Maintenance | Primary target |
-| ComfyUI | 🔧 Planned | Compatibility check & fixes needed |
+| ComfyUI | ✅ Active Maintenance | PyTorch 2.10 verified, image generation confirmed |
 | DreamBooth | ❄️ Not Supported | Frozen. No maintenance. |
 
 ---
@@ -18,15 +18,13 @@ Last Updated: 2026-04-30
 
 None
 
+
 ---
 
 ## Pending
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
-| T-010 | ComfyUI: verify compatibility with PyTorch 2.10 | High | Run on Colab and check for errors |
-| T-011 | ComfyUI: add xformers fix cell if needed | Medium | Same pattern as AUTOMATIC1111 |
-| T-012 | ComfyUI: verify gdown==5.2.1 pin is applied | Medium | Check Requirements cell |
 | T-013 | Post announcement on original repo Issues | Low | https://github.com/TheLastBen/fast-stable-diffusion/issues — notify users about this fork |
 
 ---
@@ -35,6 +33,9 @@ None
 
 | # | Task | Completed | Notes |
 |---|------|-----------|-------|
+| T-010 | ComfyUI: verify compatibility with PyTorch 2.10 | 2026-04-30 | Verified. Image generation confirmed. BUG-0006〜0010 fixed |
+| T-011 | ComfyUI: add xformers fix cell | 2026-04-30 | Done. `--pre` flag added |
+| T-012 | ComfyUI: verify gdown==5.2.1 pin | 2026-04-30 | Confirmed in Requirements cell |
 | T-008 | Fix hardcoded Python paths | 2026-04-27 | 20 locations across 3 notebooks. commit `2cdfc95` |
 | T-007 | Implement Colab environment check cell | 2026-04-27 | All 3 notebooks. commit `3b14375` |
 | T-009 | gdown v6 compatibility fix | 2026-04-27 | Short-term fix (gdown==5.2.1 pin) complete. commit `822d26c` |

@@ -1,6 +1,6 @@
 # PROGRESS: fast-stable-diffusion
 
-Last Updated: 2026-04-30
+Last Updated: 2026-04-30 (evening)
 
 ---
 
@@ -43,3 +43,11 @@ Last Updated: 2026-04-30
 
 - ✅ Verified BUG-0005 fix (image generation confirmed working on SDXL + Illustrious models)
 - ✅ Removed duplicate xformers cell (id=NONE) → commit `214e5e9`
+- ✅ BUG-0006: ComfyUI ngrok guard missing → commit `41b37af`
+- ✅ BUG-0007: comfy-aimdo module not found → commit `f2d9729`
+- ✅ BUG-0008: simpleeval missing + xformers fix cell for ComfyUI → commit `c162ced`
+- ✅ BUG-0009: ComfyUI URL not accessible (tunnel + timing fixes) → commits `14cfd1f`〜`8c16b59`
+- ✅ BUG-0010: aiohttp version mismatch (FormData error) → commit `b4e4af2`
+- ✅ T-010: ComfyUI PyTorch 2.10 full verification complete — image generation confirmed ✅
+- ✅ T-011: xformers fix cell added to ComfyUI notebook
+- ✅ T-012: gdown==5.2.1 pin confirmed in ComfyUI Requirements cell
