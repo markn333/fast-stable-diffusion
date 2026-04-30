@@ -2,3 +2,12 @@
 
 # Japanese source files (local only, English versions are committed)
 *.ja.md
+
+# Mothership internal management files (not for public)
+PROJECT.md
+REQUEST.md
+PLAN.md
+reports/
+.github/copilot-instructions.md
+.github/instructions/
+.github/prompts/
