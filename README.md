@@ -29,6 +29,7 @@
 | BUG-0008 | `simpleeval` missing + xformers built for PyTorch 2.9 | Added `simpleeval` to Requirements; added Fix xformers cell |
 | BUG-0009 | ComfyUI URL inaccessible (tunnel + timing issues) | Switched to pinggy.io; stream stdout line-by-line to detect readiness |
 | BUG-0010 | `FormData.__init__() got unexpected keyword argument 'default_to_multipart'` | Added `aiohttp -U` to Requirements |
+| BUG-0011 | `sentencepiece` C extension and Python wrapper version mismatch after Colab base image update | Added `--force-reinstall sentencepiece` to Requirements |
 
 See [`bugs/`](./bugs/) for full details on each fix.
 
