@@ -25,7 +25,7 @@ None
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
-| T-013 | Post announcement on original repo Issues | Low | https://github.com/TheLastBen/fast-stable-diffusion/issues — notify users about this fork |
+| T-013 | Post on X (Twitter) to announce fork | Low | Draft ready. markn3 to post manually. |
 
 ---
 

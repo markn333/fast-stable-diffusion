@@ -51,3 +51,9 @@ Last Updated: 2026-04-30 (evening)
 - ✅ T-010: ComfyUI PyTorch 2.10 full verification complete — image generation confirmed ✅
 - ✅ T-011: xformers fix cell added to ComfyUI notebook
 - ✅ T-012: gdown==5.2.1 pin confirmed in ComfyUI Requirements cell
+- ✅ README.md updated: ComfyUI status, BUG-0006~0010 added
+- ✅ SPEC.md fully translated to English and published
+- ✅ Mothership internal files removed from git tracking (gitignore)
+- ✅ Notebook title URLs updated from TheLastBen → markn333
+- ✅ bugs/BUG-0008.md, BUG-0009.md, BUG-0010.md created
+- ✅ X post draft prepared (T-013 — pending manual post by markn3)
