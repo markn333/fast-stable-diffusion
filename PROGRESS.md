@@ -1,6 +1,6 @@
 # PROGRESS: fast-stable-diffusion
 
-Last Updated: 2026-04-30 (evening)
+Last Updated: 2026-07-25 (evening)
 
 ---
 
@@ -57,3 +57,10 @@ Last Updated: 2026-04-30 (evening)
 - ✅ Notebook title URLs updated from TheLastBen → markn333
 - ✅ bugs/BUG-0008.md, BUG-0009.md, BUG-0010.md created
 - ✅ X post draft prepared (T-013 — pending manual post by markn3)
+
+### 2026-07-25
+
+- ✅ BUG-0011: `sentencepiece` C extension / Python wrapper version mismatch after Colab base image update
+  - Added `--force-reinstall sentencepiece` to AUTOMATIC1111 Requirements cell → commits `ae207aa`, `ea729a2`, `0ebff67`
+- ✅ README.md What's Fixed table updated (BUG-0011 added)
+- ✅ BUG-0012: CLIP `position_ids` HalfTensor in `transformers/modeling_clip.py` — added `.long()` sed patch to Requirements cell
