@@ -36,6 +36,7 @@
 | BUG-0015 | Colab base image moved to **Python 3.13**: nine hardcoded `python3.12` paths became silent no-ops, and one bundled `pip install` aborted on `numpy==1.26` (no cp313 wheel), so `pydantic` stayed at 2.x (`AttributeError: __config__` → every script UI failed → webui exited) and `controlnet_aux` was never installed | Derived the interpreter paths from `sysconfig`; one `pip install` per line; `pydantic==1.10.22`; dropped the `numpy` pin; added a post-install package check |
 | BUG-0016 | `ImportError: cannot import name 'IncEx' from 'pydantic.main'` at the very first import — FastAPI dropped Pydantic v1 support in 0.126.0, and the notebook installed it unpinned | Pinned `fastapi==0.125.0`, the last release carrying the v1 code path (verified in the wheel) |
 | BUG-0017 | `creating model quickly: ValueError` on every start, then ~12 GB re-downloaded per session (CLIP 1.71 GB + OpenCLIP 10.2 GB) — an inherited `sed` made webui pass a model name alongside `state_dict={}`, which transformers rejects, dropping it to the slow load path | Reversed the `sed` in the Start cell (the file lives on Drive, so it must be actively undone) |
+| BUG-0018 | `OSError: [Errno 107] Transport endpoint is not connected` from `import gradio` — not a gradio problem: the Google Drive FUSE mount dropped while the working directory was on it | Drive cell now verifies the mount and force-remounts a stale one; Start cell refuses to launch on a dead mount and says how to recover |
 
 See [`bugs/`](./bugs/) for full details on each fix.
 
