@@ -18,7 +18,7 @@ Last Updated: 2026-08-25
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
-| T-015 | Verify BUG-0013 / 0014 / 0015 / 0016 / 0017 fixes on Colab | High | **Startup confirmed 2026-08-25** (WebUI reached `Running on public URL` + `Connected`, ControlNet v1.1.455 loaded, no script UI errors). Still to confirm: image generation, and that BUG-0017 removes the ~12 GB of per-session downloads. |
+| T-015 | Verify BUG-0013 / 0014 / 0015 / 0016 / 0017 fixes on Colab | High | **Startup confirmed 2026-08-25** (WebUI reached `Running on public URL` + `Connected`, ControlNet v1.1.455 loaded, no script UI errors). Still to confirm: image generation, that BUG-0017 removes the ~12 GB of per-session downloads, and the BUG-0018 mount guard. |
 
 
 ---
