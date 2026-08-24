@@ -31,6 +31,7 @@
 | BUG-0010 | `FormData.__init__() got unexpected keyword argument 'default_to_multipart'` | Added `aiohttp -U` to Requirements |
 | BUG-0011 | `sentencepiece` C extension and Python wrapper version mismatch after Colab base image update | Added `--force-reinstall sentencepiece` to Requirements |
 | BUG-0012 | CLIP `position_ids` becomes `HalfTensor` in `transformers/modeling_clip.py`, breaks model load | Added `.long()` cast via `sed` patch in Requirements |
+| BUG-0013 | `ModuleNotFoundError: No module named 'pyngrok'` after Colab base image update | Added `pyngrok` to Requirements |
 
 See [`bugs/`](./bugs/) for full details on each fix.
 
