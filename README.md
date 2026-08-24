@@ -40,6 +40,7 @@
 | BUG-0019 | `No module named 'pytorch_lightning.utilities.distributed'` (removed in v2.x) | Added `sed` patch to update import path in `ddpm.py` |
 | BUG-0020 | `ModuleNotFoundError: No module named 'piexif'` after Colab base image update | Added `piexif` to Requirements |
 | BUG-0021 | `ModuleNotFoundError: No module named 'pillow_avif'` after Colab base image update | Added `pillow-avif-plugin` to Requirements |
+| BUG-0022 | `ModuleNotFoundError: No module named 'clip'` (k-diffusion dep) after Colab base image update | Added `openai-clip` to Requirements |
 
 See [`bugs/`](./bugs/) for full details on each fix.
 

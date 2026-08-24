@@ -76,3 +76,4 @@ Last Updated: 2026-08-24
 - ✅ BUG-0019: `pytorch_lightning.utilities.distributed` removed in v2.x — added `sed` patch to fix import in `ddpm.py`
 - ✅ BUG-0020: `piexif` removed from Colab base image — added `piexif` to Requirements cell
 - ✅ BUG-0021: `pillow_avif` (`pillow-avif-plugin`) removed from Colab base image — added `pillow-avif-plugin` to Requirements cell
+- ✅ BUG-0022: `clip` (`openai-clip`, k-diffusion dep) removed from Colab base image — added `openai-clip` to Requirements cell
