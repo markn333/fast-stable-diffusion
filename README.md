@@ -36,6 +36,7 @@
 | BUG-0015 | `ModuleNotFoundError: No module named 'kornia'` after Colab base image update | Added `kornia` to Requirements |
 | BUG-0016 | `ModuleNotFoundError: No module named 'open_clip'` after Colab base image update | Added `open_clip_torch` to Requirements |
 | BUG-0017 | `ModuleNotFoundError: No module named 'diskcache'` after Colab base image update | Added `diskcache` to Requirements |
+| BUG-0018 | `ModuleNotFoundError: No module named 'git'` after Colab base image update | Added `gitpython` to Requirements |
 
 See [`bugs/`](./bugs/) for full details on each fix.
 
