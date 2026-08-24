@@ -70,3 +70,4 @@ Last Updated: 2026-08-24
 - ✅ BUG-0013 (consolidated): Colab base image update removed `pyngrok`, `pytorch_lightning`, `kornia`, `open_clip`, `diskcache`, `git`, `piexif`, `pillow_avif`, `clip` and broke `pytorch_lightning.utilities.distributed` (v2.x API removal) — added all missing packages to Requirements cell; `sed` patch for `ddpm.py` import path
 - ✅ Proactively checked k-diffusion/sgm upstream `requirements.txt` — swapped `openai-clip` for `clip-anytorch`; added `dctorch`, `invisible-watermark`, `natsort`, `fairscale`, `fire` to Requirements cell
 - ✅ Consolidated former BUG-0013~BUG-0022 (individually filed) into a single BUG-0013 record since they share one root cause (2026-08-24 Colab base image update)
+- ✅ BUG-0014: bundled Gradio silently upgraded to 4.x, removing `gr.components.IOComponent` used by webui's `gradio_extensons.py` — pinned `gradio==3.41.2` in Requirements cell
