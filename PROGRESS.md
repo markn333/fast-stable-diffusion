@@ -74,3 +74,4 @@ Last Updated: 2026-08-24
 - ✅ BUG-0017: `diskcache` removed from Colab base image — added `diskcache` to Requirements cell
 - ✅ BUG-0018: `git` (`gitpython`) removed from Colab base image — added `gitpython` to Requirements cell
 - ✅ BUG-0019: `pytorch_lightning.utilities.distributed` removed in v2.x — added `sed` patch to fix import in `ddpm.py`
+- ✅ BUG-0020: `piexif` removed from Colab base image — added `piexif` to Requirements cell
