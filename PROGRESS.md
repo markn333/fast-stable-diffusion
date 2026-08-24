@@ -71,3 +71,4 @@ Last Updated: 2026-08-24
 - ✅ BUG-0014: `pytorch_lightning` removed from Colab base image — added `pytorch_lightning` to Requirements cell
 - ✅ BUG-0015: `kornia` removed from Colab base image — added `kornia` to Requirements cell
 - ✅ BUG-0016: `open_clip` (`open_clip_torch`) removed from Colab base image — added `open_clip_torch` to Requirements cell
+- ✅ BUG-0017: `diskcache` removed from Colab base image — added `diskcache` to Requirements cell
