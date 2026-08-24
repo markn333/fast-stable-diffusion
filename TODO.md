@@ -18,7 +18,7 @@ Last Updated: 2026-08-25
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
-| T-015 | Verify BUG-0013 / 0014 / 0015 / 0016 fixes on Colab | High | Requirements cell now prints the Python version and any missing or mismatched package. Confirm the WebUI reaches image generation. |
+| T-015 | Verify BUG-0013 / 0014 / 0015 / 0016 / 0017 fixes on Colab | High | **Startup confirmed 2026-08-25** (WebUI reached `Running on public URL` + `Connected`, ControlNet v1.1.455 loaded, no script UI errors). Still to confirm: image generation, and that BUG-0017 removes the ~12 GB of per-session downloads. |
 
 
 ---
@@ -27,7 +27,6 @@ Last Updated: 2026-08-25
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
-| T-014 | A/B the `sd_disable_initialization.py` sed in the Start cell | Medium | TheLastBen's `CLIPTextModel_from_pretrained(None` → `pretrained_model_name_or_path` sed makes current transformers reject `state_dict` + model name. Non-fatal (webui falls back to the slow path) but re-downloads 1.7 GB of CLIP per session. Run with and without before changing. See BUG-0015. |
 | T-013 | Post on X (Twitter) to announce fork | Low | Draft ready. markn3 to post manually. |
 
 ---
@@ -36,6 +35,7 @@ Last Updated: 2026-08-25
 
 | # | Task | Completed | Notes |
 |---|------|-----------|-------|
+| T-014 | Resolve the `sd_disable_initialization.py` sed | 2026-08-25 | Settled by source inspection instead of an A/B run: transformers' check is `state_dict is not None and pretrained_model_name_or_path is not None`, and A1111 passes `None` by design. Reversed the sed. BUG-0017 |
 | T-010 | ComfyUI: verify compatibility with PyTorch 2.10 | 2026-04-30 | Verified. Image generation confirmed. BUG-0006〜0010 fixed |
 | T-011 | ComfyUI: add xformers fix cell | 2026-04-30 | Done. `--pre` flag added |
 | T-012 | ComfyUI: verify gdown==5.2.1 pin | 2026-04-30 | Confirmed in Requirements cell |
