@@ -33,6 +33,7 @@
 | BUG-0012 | CLIP `position_ids` becomes `HalfTensor` in `transformers/modeling_clip.py`, breaks model load | Added `.long()` cast via `sed` patch in Requirements |
 | BUG-0013 | `ModuleNotFoundError: No module named 'pyngrok'` after Colab base image update | Added `pyngrok` to Requirements |
 | BUG-0014 | `ModuleNotFoundError: No module named 'pytorch_lightning'` after Colab base image update | Added `pytorch_lightning` to Requirements |
+| BUG-0015 | `ModuleNotFoundError: No module named 'kornia'` after Colab base image update | Added `kornia` to Requirements |
 
 See [`bugs/`](./bugs/) for full details on each fix.
 
