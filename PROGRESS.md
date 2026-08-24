@@ -1,6 +1,6 @@
 # PROGRESS: fast-stable-diffusion
 
-Last Updated: 2026-08-24
+Last Updated: 2026-08-25
 
 ---
 
@@ -71,3 +71,13 @@ Last Updated: 2026-08-24
 - ✅ Proactively checked k-diffusion/sgm upstream `requirements.txt` — swapped `openai-clip` for `clip-anytorch`; added `dctorch`, `invisible-watermark`, `natsort`, `fairscale`, `fire` to Requirements cell
 - ✅ Consolidated former BUG-0013~BUG-0022 (individually filed) into a single BUG-0013 record since they share one root cause (2026-08-24 Colab base image update)
 - ✅ BUG-0014: bundled Gradio silently upgraded to 4.x, removing `gr.components.IOComponent` used by webui's `gradio_extensons.py` — pinned `gradio==3.41.2` in Requirements cell
+
+### 2026-08-25
+
+- ✅ Imported into Claude Mothership (managed-project path: existing PROJECT/PLAN/PROGRESS kept as-is). Copilot → Claude environment confirmed already converted; added `CLAUDE.md` / `.claude/` to `.gitignore` so the charter stays out of the public repo (commit `03f610c`)
+- ✅ BUG-0015: Colab base image moved to **Python 3.13**. Two silent defects turned that into a startup crash:
+  - nine hardcoded `python3.12` paths in the Requirements cell became no-ops (including the BUG-0005/0012 `position_ids.long()` patch, whose target line still exists in current transformers)
+  - one bundled `pip install` aborted on `numpy==1.26` (no cp313 wheel, no pure-python fallback), so `pydantic`, `controlnet_aux`, `wandb` and `scipy` were all skipped
+  - → pydantic stayed at 2.x → `modules/api/models.py` `__config__` AttributeError → every script UI failed → `ui.py:476` got `steps = None` → gradio `set_event_trigger` crashed → webui exited
+  - Fix: derive `sitepkg`/`stdlib` from `sysconfig`, one `pip install` per line, `pydantic==1.10.22` (first 1.10.x with cp313 wheels), dropped the `numpy` pin, and added a post-install package check that prints what is missing
+- ⚠️ Not yet verified on Colab (T-015). `sd_disable_initialization.py` `state_dict` ValueError left alone pending an A/B run (T-014)

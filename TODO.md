@@ -1,6 +1,6 @@
 # TODO: fast-stable-diffusion
 
-Last Updated: 2026-04-30
+Last Updated: 2026-08-25
 
 ---
 
@@ -16,7 +16,9 @@ Last Updated: 2026-04-30
 
 ## In Progress
 
-None
+| # | Task | Priority | Notes |
+|---|------|----------|-------|
+| T-015 | Verify BUG-0013 / BUG-0014 / BUG-0015 fixes on Colab | High | Requirements cell now prints the Python version and any missing package. Confirm the WebUI reaches image generation. |
 
 
 ---
@@ -25,6 +27,7 @@ None
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
+| T-014 | A/B the `sd_disable_initialization.py` sed in the Start cell | Medium | TheLastBen's `CLIPTextModel_from_pretrained(None` → `pretrained_model_name_or_path` sed makes current transformers reject `state_dict` + model name. Non-fatal (webui falls back to the slow path) but re-downloads 1.7 GB of CLIP per session. Run with and without before changing. See BUG-0015. |
 | T-013 | Post on X (Twitter) to announce fork | Low | Draft ready. markn3 to post manually. |
 
 ---
