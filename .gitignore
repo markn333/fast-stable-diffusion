@@ -11,3 +11,5 @@ reports/
 .github/copilot-instructions.md
 .github/instructions/
 .github/prompts/
+CLAUDE.md
+.claude/
