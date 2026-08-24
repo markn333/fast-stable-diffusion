@@ -65,15 +65,8 @@ Last Updated: 2026-08-24
 - ✅ README.md What's Fixed table updated (BUG-0011 added)
 - ✅ BUG-0012: CLIP `position_ids` HalfTensor in `transformers/modeling_clip.py` — added `.long()` sed patch to Requirements cell
 
-### 2026-08-24
+### 2026-08-24 – 2026-08-25
 
-- ✅ BUG-0013: `pyngrok` removed from Colab base image — added `pyngrok` to Requirements cell
-- ✅ BUG-0014: `pytorch_lightning` removed from Colab base image — added `pytorch_lightning` to Requirements cell
-- ✅ BUG-0015: `kornia` removed from Colab base image — added `kornia` to Requirements cell
-- ✅ BUG-0016: `open_clip` (`open_clip_torch`) removed from Colab base image — added `open_clip_torch` to Requirements cell
-- ✅ BUG-0017: `diskcache` removed from Colab base image — added `diskcache` to Requirements cell
-- ✅ BUG-0018: `git` (`gitpython`) removed from Colab base image — added `gitpython` to Requirements cell
-- ✅ BUG-0019: `pytorch_lightning.utilities.distributed` removed in v2.x — added `sed` patch to fix import in `ddpm.py`
-- ✅ BUG-0020: `piexif` removed from Colab base image — added `piexif` to Requirements cell
-- ✅ BUG-0021: `pillow_avif` (`pillow-avif-plugin`) removed from Colab base image — added `pillow-avif-plugin` to Requirements cell
-- ✅ BUG-0022: `clip` (`openai-clip`, k-diffusion dep) removed from Colab base image — added `openai-clip` to Requirements cell
+- ✅ BUG-0013 (consolidated): Colab base image update removed `pyngrok`, `pytorch_lightning`, `kornia`, `open_clip`, `diskcache`, `git`, `piexif`, `pillow_avif`, `clip` and broke `pytorch_lightning.utilities.distributed` (v2.x API removal) — added all missing packages to Requirements cell; `sed` patch for `ddpm.py` import path
+- ✅ Proactively checked k-diffusion/sgm upstream `requirements.txt` — swapped `openai-clip` for `clip-anytorch`; added `dctorch`, `invisible-watermark`, `natsort`, `fairscale`, `fire` to Requirements cell
+- ✅ Consolidated former BUG-0013~BUG-0022 (individually filed) into a single BUG-0013 record since they share one root cause (2026-08-24 Colab base image update)

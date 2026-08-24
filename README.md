@@ -31,16 +31,7 @@
 | BUG-0010 | `FormData.__init__() got unexpected keyword argument 'default_to_multipart'` | Added `aiohttp -U` to Requirements |
 | BUG-0011 | `sentencepiece` C extension and Python wrapper version mismatch after Colab base image update | Added `--force-reinstall sentencepiece` to Requirements |
 | BUG-0012 | CLIP `position_ids` becomes `HalfTensor` in `transformers/modeling_clip.py`, breaks model load | Added `.long()` cast via `sed` patch in Requirements |
-| BUG-0013 | `ModuleNotFoundError: No module named 'pyngrok'` after Colab base image update | Added `pyngrok` to Requirements |
-| BUG-0014 | `ModuleNotFoundError: No module named 'pytorch_lightning'` after Colab base image update | Added `pytorch_lightning` to Requirements |
-| BUG-0015 | `ModuleNotFoundError: No module named 'kornia'` after Colab base image update | Added `kornia` to Requirements |
-| BUG-0016 | `ModuleNotFoundError: No module named 'open_clip'` after Colab base image update | Added `open_clip_torch` to Requirements |
-| BUG-0017 | `ModuleNotFoundError: No module named 'diskcache'` after Colab base image update | Added `diskcache` to Requirements |
-| BUG-0018 | `ModuleNotFoundError: No module named 'git'` after Colab base image update | Added `gitpython` to Requirements |
-| BUG-0019 | `No module named 'pytorch_lightning.utilities.distributed'` (removed in v2.x) | Added `sed` patch to update import path in `ddpm.py` |
-| BUG-0020 | `ModuleNotFoundError: No module named 'piexif'` after Colab base image update | Added `piexif` to Requirements |
-| BUG-0021 | `ModuleNotFoundError: No module named 'pillow_avif'` after Colab base image update | Added `pillow-avif-plugin` to Requirements |
-| BUG-0022 | `ModuleNotFoundError: No module named 'clip'` (k-diffusion dep) after Colab base image update | Added `openai-clip` to Requirements |
+| BUG-0013 | Colab base image update (2026-08-24) cascaded into 10 `ModuleNotFoundError`s (`pyngrok`, `pytorch_lightning`, `kornia`, `open_clip`, `diskcache`, `git`, `piexif`, `pillow_avif`, `clip`) plus a `pytorch_lightning.utilities.distributed` API removal | Added all missing packages (incl. `clip-anytorch`, `dctorch`, `invisible-watermark`, `natsort`, `fairscale`, `fire`) to Requirements; `sed` patch for the `ddpm.py` import path |
 
 See [`bugs/`](./bugs/) for full details on each fix.
 
