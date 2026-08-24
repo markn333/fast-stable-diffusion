@@ -34,6 +34,7 @@
 | BUG-0013 | Colab base image update (2026-08-24) cascaded into 10 `ModuleNotFoundError`s (`pyngrok`, `pytorch_lightning`, `kornia`, `open_clip`, `diskcache`, `git`, `piexif`, `pillow_avif`, `clip`) plus a `pytorch_lightning.utilities.distributed` API removal | Added all missing packages (incl. `clip-anytorch`, `dctorch`, `invisible-watermark`, `natsort`, `fairscale`, `fire`) to Requirements; `sed` patch for the `ddpm.py` import path |
 | BUG-0014 | `AttributeError: module 'gradio.components' has no attribute 'IOComponent'` — bundled Gradio silently upgraded to 4.x | Pinned `gradio==3.41.2` in Requirements |
 | BUG-0015 | Colab base image moved to **Python 3.13**: nine hardcoded `python3.12` paths became silent no-ops, and one bundled `pip install` aborted on `numpy==1.26` (no cp313 wheel), so `pydantic` stayed at 2.x (`AttributeError: __config__` → every script UI failed → webui exited) and `controlnet_aux` was never installed | Derived the interpreter paths from `sysconfig`; one `pip install` per line; `pydantic==1.10.22`; dropped the `numpy` pin; added a post-install package check |
+| BUG-0016 | `ImportError: cannot import name 'IncEx' from 'pydantic.main'` at the very first import — FastAPI dropped Pydantic v1 support in 0.126.0, and the notebook installed it unpinned | Pinned `fastapi==0.125.0`, the last release carrying the v1 code path (verified in the wheel) |
 
 See [`bugs/`](./bugs/) for full details on each fix.
 

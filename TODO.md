@@ -18,7 +18,7 @@ Last Updated: 2026-08-25
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
-| T-015 | Verify BUG-0013 / BUG-0014 / BUG-0015 fixes on Colab | High | Requirements cell now prints the Python version and any missing package. Confirm the WebUI reaches image generation. |
+| T-015 | Verify BUG-0013 / 0014 / 0015 / 0016 fixes on Colab | High | Requirements cell now prints the Python version and any missing or mismatched package. Confirm the WebUI reaches image generation. |
 
 
 ---
