@@ -34,6 +34,7 @@
 | BUG-0013 | `ModuleNotFoundError: No module named 'pyngrok'` after Colab base image update | Added `pyngrok` to Requirements |
 | BUG-0014 | `ModuleNotFoundError: No module named 'pytorch_lightning'` after Colab base image update | Added `pytorch_lightning` to Requirements |
 | BUG-0015 | `ModuleNotFoundError: No module named 'kornia'` after Colab base image update | Added `kornia` to Requirements |
+| BUG-0016 | `ModuleNotFoundError: No module named 'open_clip'` after Colab base image update | Added `open_clip_torch` to Requirements |
 
 See [`bugs/`](./bugs/) for full details on each fix.
 
