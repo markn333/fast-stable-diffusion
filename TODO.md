@@ -18,7 +18,7 @@ Last Updated: 2026-08-25
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
-| T-015 | Verify BUG-0021 workaround on Colab | High | **Generation confirmed working 2026-08-26** (model loads, PNGs written to Drive). Remaining: does `--no-gradio-queue` bring results back to the gallery? Unticking `Disable_Gradio_Queue` is the A/B. |
+| T-015 | Verify BUG-0022 on Colab | High | Pinning `uvicorn==0.49.0` should restore the gallery, PNG Info and Save in one go. Turn `Test_Disable_Extensions` back off and leave `Disable_Gradio_Queue` off. |
 
 
 ---
