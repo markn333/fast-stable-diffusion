@@ -18,7 +18,7 @@ Last Updated: 2026-08-25
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
-| T-015 | Verify BUG-0022 on Colab | High | Pinning `uvicorn==0.49.0` should restore the gallery, PNG Info and Save in one go. Turn `Test_Disable_Extensions` back off and leave `Disable_Gradio_Queue` off. |
+| T-015 | Fix gradio's websocket queue (BUG-0021 root cause) | High | Workaround shipped and working (`--no-gradio-queue`), but long multi-batch runs 504 on the gradio.live tunnel. Next experiment: `anyio==3.7.1` with the queue re-enabled. |
 
 
 ---
