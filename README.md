@@ -38,6 +38,7 @@
 | BUG-0017 | `creating model quickly: ValueError` on every start, then ~12 GB re-downloaded per session (CLIP 1.71 GB + OpenCLIP 10.2 GB) — an inherited `sed` made webui pass a model name alongside `state_dict={}`, which transformers rejects, dropping it to the slow load path | Reversed the `sed` in the Start cell (the file lives on Drive, so it must be actively undone) |
 | BUG-0018 | `OSError: [Errno 107] Transport endpoint is not connected` from `import gradio` — not a gradio problem: the Google Drive FUSE mount dropped while the working directory was on it | Drive cell now verifies the mount and force-remounts a stale one; Start cell refuses to launch on a dead mount and says how to recover |
 | BUG-0019 | `'CLIPTextModel' object has no attribute 'text_model'` — the WebUI serves its URL but the model never loads. Colab ships transformers 5.x, which removed the attribute `sd_hijack` reaches into and reshaped the `_load_pretrained_model` signature that webui monkeypatches by position | Pinned `transformers==4.49.0`, the newest 4.x that keeps both (A1111's own `4.30.2` needs tokenizers 0.13.x, which has no Python 3.13 wheel) |
+| BUG-0020 | `RuntimeError: The shape of the 2D attn_mask is torch.Size([77, 77]), but should be (1, 1)` — open_clip 3.x switched its transformer to `batch_first`, while sgm still feeds LND tensors | Pinned `open_clip_torch==2.20.0` (A1111's own pin); also restored TheLastBen's `sd_disable_initialization` sed, which is the correct form under transformers 4.x |
 
 See [`bugs/`](./bugs/) for full details on each fix.
 
