@@ -93,3 +93,13 @@ Last Updated: 2026-08-25
   - A dead FUSE mount is not an unmounted one: `/content/gdrive` still exists and `drive.mount()` still reports success; only a real access reveals it. Plausibly provoked by the ~12 GB the previous session pushed through the mount (BUG-0017)
   - Mitigation — the mount cannot be made reliable from inside the notebook, so fail clearly and self-heal: the Drive cell now probes it with `os.listdir` and force-remounts a stale mount; the Start cell steps off the mount (`os.chdir('/content')`, since even printing can fail when the cwd is dead) and refuses to launch with a recovery instruction instead of a cryptic errno
   - Guard not yet exercised on Colab
+
+### 2026-08-26
+
+- ✅ **BUG-0017 confirmed working**: the run shows `CLIPTextModel_from_pretrained(None, ...)` — the reverse sed landed. Startup reached the public URL again (530.7s)
+- ✅ BUG-0019: the WebUI serves its URL but **the model never loads**. `Stable diffusion model failed to load`, fatally at `sd_hijack.py:218` → `AttributeError: 'CLIPTextModel' object has no attribute 'text_model'`
+  - Root cause: **Colab's base image now ships transformers 5.x**, and webui is built against 4.x. Two collisions: (a) v5 removed `CLIPTextModel.text_model`, which `sd_hijack` needs to install the embedding hijack — fatal; (b) webui monkeypatches `_load_pretrained_model` **by argument position**, and v5 made the 4th positional arg `load_config`, so the patch wrote `'/'` into it → `'str' object has no attribute 'hf_quantizer'`
+  - Fix: pinned `transformers==4.49.0`. Chosen by unpacking wheels, not release notes: it is the **last** version whose 4th positional arg is still `resolved_archive_file` (4.50.3 / 4.51.3 / 4.52.4 / 4.53.3 all moved it), it still defines `self.text_model = CLIPTextTransformer(`, it is called positionally so the patch lands, and its `tokenizers<0.22,>=0.21` resolves to a **cp39-abi3** wheel that covers Python 3.13
+  - A1111's own `transformers==4.30.2` is not an option: tokenizers 0.13.3 ships only cp37–cp311 wheels, so pip would have to build it from Rust on 3.13
+  - Installed **with** deps deliberately — transformers 4.x needs `huggingface-hub<1.0` while Colab carries hub 1.x
+  - Expected side effect: with the argument alignment restored, the fast path works again, so `DisableInitialization` stays active and BUG-0017's intended ~12 GB saving should finally materialise — it was correct but masked by this

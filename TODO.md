@@ -18,7 +18,7 @@ Last Updated: 2026-08-25
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
-| T-015 | Verify BUG-0013 / 0014 / 0015 / 0016 / 0017 fixes on Colab | High | **Startup confirmed 2026-08-25** (WebUI reached `Running on public URL` + `Connected`, ControlNet v1.1.455 loaded, no script UI errors). Still to confirm: image generation, that BUG-0017 removes the ~12 GB of per-session downloads, and the BUG-0018 mount guard. |
+| T-015 | Verify BUG-0013 / 0014 / 0015 / 0016 / 0017 / 0019 fixes on Colab | High | **Startup confirmed 2026-08-25** (WebUI reached `Running on public URL` + `Connected`, ControlNet v1.1.455 loaded, no script UI errors). **Model load still failing as of 2026-08-26** (BUG-0019, transformers 5.x). Still to confirm: model load, image generation, that BUG-0017+0019 remove the ~12 GB of per-session downloads, and the BUG-0018 mount guard. |
 
 
 ---
