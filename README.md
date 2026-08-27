@@ -1,7 +1,11 @@
 # fast-stable-diffusion (Community Maintained Fork)
 
 > **This is a community-maintained fork of [TheLastBen/fast-stable-diffusion](https://github.com/TheLastBen/fast-stable-diffusion).**
-> The original repository is no longer actively updated. This fork keeps the notebooks working with the current Google Colab environment (PyTorch 2.10+, Python 3.12, CUDA 12.8).
+> The original repository is no longer actively updated. This fork keeps the notebooks working with the current Google Colab environment.
+
+**Status: 🔧 Under active maintenance.**
+AUTOMATIC1111 last verified end to end on Google Colab **2026-08-27** — a 30-image batch completed,
+with images delivered to the gallery. Current Colab runtime at that time: **Python 3.13**, PyTorch 2.10, CUDA 12.8.
 
 ---
 
@@ -9,9 +13,13 @@
 
 | Notebook | Status | Open |
 |----------|--------|------|
-| **AUTOMATIC1111** | ✅ Maintained | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/markn333/fast-stable-diffusion/blob/main/fast_stable_diffusion_AUTOMATIC1111.ipynb) |
-| **ComfyUI** | ✅ Active Maintenance | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/markn333/fast-stable-diffusion/blob/main/fast_stable_diffusion_ComfyUI.ipynb) |
+| **AUTOMATIC1111** | ✅ Maintained (verified 2026-08-27) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/markn333/fast-stable-diffusion/blob/main/fast_stable_diffusion_AUTOMATIC1111.ipynb) |
+| **ComfyUI** | ⚠️ Maintained, but behind | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/markn333/fast-stable-diffusion/blob/main/fast_stable_diffusion_ComfyUI.ipynb) |
 | **DreamBooth** | ❄️ Not Supported | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/markn333/fast-stable-diffusion/blob/main/fast-DreamBooth.ipynb) |
+
+> ⚠️ **ComfyUI**: last verified 2026-04-30. The 2026-08 Colab recovery (BUG-0013 … BUG-0023) has
+> only been applied to the AUTOMATIC1111 notebook so far, so ComfyUI may still hit the Python 3.13
+> and dependency issues listed below.
 
 ---
 
