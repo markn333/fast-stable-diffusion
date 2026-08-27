@@ -26,6 +26,7 @@ Last Updated: 2026-08-25
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
+| T-016 | Port the 2026-08 Colab recovery to the ComfyUI notebook | — | **Decided 2026-08-27: not doing it.** The README states plainly that ComfyUI is behind and gives its last verified date, which is honest and costs nothing. Revisit only if the ComfyUI notebook is actually needed. |
 | T-013 | Post on X (Twitter) to announce fork | Low | Draft ready. markn3 to post manually. |
 
 ---
