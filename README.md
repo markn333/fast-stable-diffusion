@@ -5,7 +5,8 @@
 
 **Status: 🔧 Under active maintenance.**
 AUTOMATIC1111 last verified end to end on Google Colab **2026-08-27** — a **150-image batch**
-completed, every image delivered to the gallery. Current Colab runtime at that time: **Python 3.13**, PyTorch 2.10, CUDA 12.8.
+completed, every image delivered to the gallery. Both tunnels verified: the default gradio.live
+share link and the optional ngrok tunnel. Current Colab runtime at that time: **Python 3.13**, PyTorch 2.10, CUDA 12.8.
 
 ---
 
