@@ -10,3 +10,6 @@ PLAN.md
 reports/
 CLAUDE.md
 .claude/
+
+# Scratch: screenshots and working files handed over during debugging
+tmp/
