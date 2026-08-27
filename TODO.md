@@ -18,7 +18,6 @@ Last Updated: 2026-08-25
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
-| T-015 | Confirm batch 50 now that the queue is fixed | Medium | BUG-0023 verified: gallery, with the queue enabled. The 504 ceiling was an artefact of `--no-gradio-queue`, so a long multi-batch run should work again. |
 
 
 ---
@@ -35,6 +34,7 @@ Last Updated: 2026-08-25
 
 | # | Task | Completed | Notes |
 |---|------|-----------|-------|
+| T-015 | Verify the 2026-08-24 Colab recovery on Colab | 2026-08-27 | **Batch 30 completed end to end** (~22 min, all images in the gallery, no 504). Closes BUG-0013 through BUG-0023. |
 | T-014 | Resolve the `sd_disable_initialization.py` sed | 2026-08-25 | Settled by source inspection instead of an A/B run: transformers' check is `state_dict is not None and pretrained_model_name_or_path is not None`, and A1111 passes `None` by design. Reversed the sed. BUG-0017 |
 | T-010 | ComfyUI: verify compatibility with PyTorch 2.10 | 2026-04-30 | Verified. Image generation confirmed. BUG-0006〜0010 fixed |
 | T-011 | ComfyUI: add xformers fix cell | 2026-04-30 | Done. `--pre` flag added |
