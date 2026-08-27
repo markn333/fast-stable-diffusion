@@ -18,7 +18,7 @@ Last Updated: 2026-08-25
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
-| T-015 | Verify the BUG-0023 fix on Colab | High | Patch `queueing.py` queue client to `timeout=None`. Expect gallery/PNG Info/Save to recover with `Disable_Gradio_Queue` **off**, and batch 50 to run without a 504. |
+| T-015 | Confirm batch 50 now that the queue is fixed | Medium | BUG-0023 verified: gallery, with the queue enabled. The 504 ceiling was an artefact of `--no-gradio-queue`, so a long multi-batch run should work again. |
 
 
 ---
