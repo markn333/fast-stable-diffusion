@@ -4,8 +4,8 @@
 > The original repository is no longer actively updated. This fork keeps the notebooks working with the current Google Colab environment.
 
 **Status: 🔧 Under active maintenance.**
-AUTOMATIC1111 last verified end to end on Google Colab **2026-08-27** — a 30-image batch completed,
-with images delivered to the gallery. Current Colab runtime at that time: **Python 3.13**, PyTorch 2.10, CUDA 12.8.
+AUTOMATIC1111 last verified end to end on Google Colab **2026-08-27** — a **150-image batch**
+completed, every image delivered to the gallery. Current Colab runtime at that time: **Python 3.13**, PyTorch 2.10, CUDA 12.8.
 
 ---
 
