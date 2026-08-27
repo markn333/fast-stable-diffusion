@@ -18,7 +18,7 @@ Last Updated: 2026-08-25
 
 | # | Task | Priority | Notes |
 |---|------|----------|-------|
-| T-015 | Fix gradio's websocket queue (BUG-0021 root cause) | High | Workaround shipped and working (`--no-gradio-queue`), but long multi-batch runs 504 on the gradio.live tunnel. Next experiment: `anyio==3.7.1` with the queue re-enabled. |
+| T-015 | Verify the BUG-0023 fix on Colab | High | Patch `queueing.py` queue client to `timeout=None`. Expect gallery/PNG Info/Save to recover with `Disable_Gradio_Queue` **off**, and batch 50 to run without a 504. |
 
 
 ---
